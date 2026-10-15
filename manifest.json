@@ -1,0 +1,460 @@
+{
+  "project": "GameExplore",
+  "date": "2026-10-12",
+  "research_status": "stopped_at_user_request",
+  "completed_rounds": 73,
+  "unfinished_round": 74,
+  "formal_concepts_tracked": 8,
+  "concepts_validated_by_play_and_purchase": 0,
+  "game_implementation": false,
+  "archive_policy": "Original historical HTML bytes preserved. Current conclusions are in docs/summary.md and docs/decisions.md.",
+  "file_count_excluding_manifest": 89,
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 122,
+      "sha256": "a99217a44da80e1a517f14d7227875e062326d3608c0c6286077cf30ad11e626"
+    },
+    {
+      "path": "archive/README.md",
+      "bytes": 633,
+      "sha256": "8ac073343ef3d37e7e5357b87b0a14e3915eb7664c91e2db912dac78f8ce750e"
+    },
+    {
+      "path": "archive/reports/indie-game-research-overview.html",
+      "bytes": 36080,
+      "sha256": "5df5150f60d936f6ceb75c1b2e46e517330bec7902b0af8dfff447cd057a27d3"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r01.html",
+      "bytes": 82275,
+      "sha256": "0852230a26b91764453bc13e12bdd97bea9152e1d3df53e76847db5286cf96e9"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r02.html",
+      "bytes": 41501,
+      "sha256": "7793c098692d4bed52ed4569bbfd2c02de843e5e76e0b1075196c30dfa1076dd"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r03.html",
+      "bytes": 33938,
+      "sha256": "99dec65f546a71cc63713ec09c4401a143e27a1916f40e06785ee1d26ed16ee1"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r04.html",
+      "bytes": 43444,
+      "sha256": "712c4dca3d46eed3286ee527b2c06a294baee46c6c5c5326b83fafd555b9b005"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r05.html",
+      "bytes": 28769,
+      "sha256": "5853035ddf4e6b482fb5b8a5a3ed4f7201327518e73972504a05d7d71b354b35"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r06.html",
+      "bytes": 32927,
+      "sha256": "744f851d277a1186748cc2dd38e503097ee30fbd808deb6820fb8bf493dded86"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r07.html",
+      "bytes": 29561,
+      "sha256": "f32977965528ba925d21f1b0fa47e69256ab86e7ca2f57cf0f49b5bc938a7353"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r08.html",
+      "bytes": 30078,
+      "sha256": "6cafb87ba994e547a5dd7b1ff7910a32a2ffeca15dc3ed71d16ad6a13d5115de"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r09.html",
+      "bytes": 30853,
+      "sha256": "2e1e76af939951696ec7c487d854c479a3b190b466569338817307380bb7839c"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r10.html",
+      "bytes": 74895,
+      "sha256": "ffa4aa3afb9118c85fda79ae52bff87441231f725616c60377516430082134bd"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r11.html",
+      "bytes": 34848,
+      "sha256": "9ca18ecf3e6e6bb5885cfb97af11c7f45bd00dbf1dcb8fe27276abb869e58247"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r12.html",
+      "bytes": 36110,
+      "sha256": "eb0d590494b4cace5cf653cc85aa1733309f0ea48925dbae3fe5da97572460b6"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r13.html",
+      "bytes": 41117,
+      "sha256": "d4ec7b761795dadbbc55e2cc067ec59f49bb4c5129eca429e96d6f2c192b30c5"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r14.html",
+      "bytes": 43550,
+      "sha256": "0be371387aba7174471f9653db66d6ee3bca96c22bf86c4057b49b9d157b0275"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r15.html",
+      "bytes": 51141,
+      "sha256": "b4b9fe170f6d0ec7398356c27855330f147613c26fc3ffa31f72871079fad318"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r16.html",
+      "bytes": 40722,
+      "sha256": "66a07bad9e89ef285c3c2bdee7851fcdba5d829ae0cbefb146ff5264e9c77781"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r17.html",
+      "bytes": 44352,
+      "sha256": "2fd272a5bbcda0a5d0ef83e660691e8799ce7794abd487d4ad73ad0122d7eea7"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r18.html",
+      "bytes": 42305,
+      "sha256": "220dbcdf57b5df60a92514697d9aa3e0b0290f817b23b708a5aca253529786a7"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r19.html",
+      "bytes": 46434,
+      "sha256": "6f0887621e9ceefd429d9a5898d8ebb0a60225371243806aefb21d13f305941c"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r20.html",
+      "bytes": 44350,
+      "sha256": "d6a0a73f5745c9ac9f38888bd78694c99f0a342f241acb6ded59d4e6b3a9b20f"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r21.html",
+      "bytes": 47039,
+      "sha256": "c8fdba25d3197b32b296439cc46b117eca7fca0c591af75dc5f16a3c0e9f6e18"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r22.html",
+      "bytes": 53042,
+      "sha256": "8ee223d60dbce109648049dd1eab8498bcedb5827feb63075f8e285d113e64f2"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r23.html",
+      "bytes": 49804,
+      "sha256": "f3d262d4f61b885974238a05ec40710ac0a6132bcfc5f76bb94539f0a040431f"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r24.html",
+      "bytes": 53175,
+      "sha256": "638eadf98560d49924617f28d88159a00d97d50421b97ed2b248ec624f668bfd"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r25.html",
+      "bytes": 61386,
+      "sha256": "20724700bd746da9f3daf55dd73517bf251c6ff00a0d0cb90a63d7a24c2e791e"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r26.html",
+      "bytes": 49271,
+      "sha256": "f2e8d16b4474dd6550e74c8f1a048245eb9f46e390eaabeb57e5967af6559b57"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r27.html",
+      "bytes": 47840,
+      "sha256": "3860d60f63e4380b45506718bd94c88d2b6386c46a4c3536041f9aa55ecaa4d8"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r28.html",
+      "bytes": 54587,
+      "sha256": "84c7a8735905727638ab6702bf3c0c9bd6d8e4e91068d8590bfcc25dbd7529c8"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r29.html",
+      "bytes": 49589,
+      "sha256": "e654f0fc8bfffd5cfd303de1fe83618ac32cc12a21bb86cebc15914fa9934d9f"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r30.html",
+      "bytes": 51148,
+      "sha256": "b4662e7cb797b933ca3b0b0531cfb7ad4571c82c575bd89c952d7fb871dd25e9"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r31.html",
+      "bytes": 51393,
+      "sha256": "aeed91b59a4925ce1a310c52bbb600053d0765dd8a18275f89ab7e742540d868"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r32.html",
+      "bytes": 56149,
+      "sha256": "30de2af2b45baeda195f936a0e9c2c2a8cf12aac17c9ba791e106835a286777f"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r33.html",
+      "bytes": 57694,
+      "sha256": "1757faf99246032dc50ed3ddc4f048af30fc8cf3bc4ab2408097cf6723078d80"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r34.html",
+      "bytes": 49980,
+      "sha256": "1b19d4aa30ba63f5a1b0b1caeb87b94d782281a58346386ea360578c0295471f"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r35.html",
+      "bytes": 33999,
+      "sha256": "da0792b558bb367fcad0ca34567e7f982a7b3e01ba985d074100d303a213ac87"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r36.html",
+      "bytes": 36544,
+      "sha256": "e73d68fb430549ff418dd935140270785e1608f011a459c568dafb68534ac999"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r37.html",
+      "bytes": 15149,
+      "sha256": "4601b94482ded41ba7936de9dbab1311b94be7656261c97975d301bc210c0f9e"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r38.html",
+      "bytes": 20385,
+      "sha256": "085113eeec29f761e00815f030b3d0be54fe0619776ab68ec8d0ee8d7a7514b4"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r39.html",
+      "bytes": 23871,
+      "sha256": "ac18c15b3d93ed17854aceff6b36c6cb05b91f0555b2ef38414e9e9657751877"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r40.html",
+      "bytes": 26259,
+      "sha256": "00314cd75ac25d7bca709faeb38fa113db28bb107244b25dbddb04aef887c77e"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r41.html",
+      "bytes": 19621,
+      "sha256": "657e57ec33e0d2681aa695db0035d4a36397a520815113825ca9114125ae281e"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r42.html",
+      "bytes": 19303,
+      "sha256": "ea6ed93c6718341961337516e4b15aa49bb60d3c51a5bbf0f98ae6a43101025a"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r43.html",
+      "bytes": 28166,
+      "sha256": "f12e78ce02903e2f9fbb093806fbeda6d16e1b691b2bc3515fbbea886490553e"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r44.html",
+      "bytes": 25710,
+      "sha256": "bf4d593bff9528a61813f88d2352b70d22ee5c82745ac9933d0a01572843aa51"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r45.html",
+      "bytes": 26268,
+      "sha256": "eff2911754487c91724e6fd22e9ebb9c2b83531a74854dc0b2508bc9d7b38420"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r46.html",
+      "bytes": 24025,
+      "sha256": "f2e0d8a61390f74ba7e154f7fd104af06a0db776fe9ffa4c2fd17509e15c17b4"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r47.html",
+      "bytes": 27247,
+      "sha256": "f171eb4492df04e55b945e6f057f6637f0326ada07d163c2c293b51c7aca1b5d"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r48.html",
+      "bytes": 27039,
+      "sha256": "f0bf07e338224c1f3921bd5bd970e24d986d5ba8134cfa96ec4b672d79bc3adf"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r49.html",
+      "bytes": 16379,
+      "sha256": "d58739d9e60cda197539362c4056026864392099d9e64958ce3aef9cc06e1118"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r50.html",
+      "bytes": 23245,
+      "sha256": "d02c9076cb58aa45c3902f716bc629027c0ebbbb0259ad393b8d42a12044af28"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r51.html",
+      "bytes": 24328,
+      "sha256": "75434d7bb8a427f40191a607b6ae610e104022c8e6d1906c96c0603f46ecdcc0"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r52.html",
+      "bytes": 24022,
+      "sha256": "add85a508ed9e0b5acc9306ca389530ccc9d1b50f7d3a98a72166cc5f8292b71"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r53.html",
+      "bytes": 26513,
+      "sha256": "5dbf180f23269b500b6c5641ae5aa0aa53507e488336bc82587756b49d7391d5"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r54.html",
+      "bytes": 28227,
+      "sha256": "d23a7adc33dc4026a7c445414621c1161b642e5a18efd2079a59dd8f859188ad"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r55.html",
+      "bytes": 29268,
+      "sha256": "191609304a7edf0066c2f38dbb6661c9c371364a9127650c691e311b6a73f1bd"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r56.html",
+      "bytes": 26024,
+      "sha256": "f79babb62e9952ea866a22151ab681169568059ba9da4748903c93ce0ed4df18"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r57.html",
+      "bytes": 28286,
+      "sha256": "a2d11a00eb4620fcbfa9408dfbfb18c411f36cdaa3df8d1c5033182fa3687dab"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r58.html",
+      "bytes": 24077,
+      "sha256": "3f283e1f19d177ff02148271a280b661d2ec0a538f87ddc608410b882adaf8e6"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r59.html",
+      "bytes": 27167,
+      "sha256": "c7695984c84b9fac98d58c81a070bad1de6e77e9004b78977ec4f9c3a97799da"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r60.html",
+      "bytes": 28261,
+      "sha256": "99c77c57247e2ec3e34c3e930e42728e623351d203b055d8b89e14ccca5ccb4c"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r61.html",
+      "bytes": 21233,
+      "sha256": "2f0db0f824a330c8a53f9386f6fc33cef7c5d0a8a2b0674afe2cf545c1b5ac07"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r62.html",
+      "bytes": 26756,
+      "sha256": "30fbe0f3a395f8c4995184e8c84127ccc53b9349022aa4a7d9fb5656c367ca60"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r63.html",
+      "bytes": 32742,
+      "sha256": "becf42f760ffacc9c6f6169091ab11410cb74fbb05228521399095257ab56a4d"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r64.html",
+      "bytes": 28471,
+      "sha256": "473e31f03868113c37ba929d135e71626074381c5ab146a15428fbbe0f8bc70c"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r65.html",
+      "bytes": 25722,
+      "sha256": "1f03ecdc90cc0f7474d6a8b4879b97a944ba9269088d7972c9e8d46a6048459b"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r66.html",
+      "bytes": 28477,
+      "sha256": "9fd46bee750a719cc258b31a5c943e7dffc60f0380cb482867bd66bc5d8d89ee"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r67.html",
+      "bytes": 25071,
+      "sha256": "7c1abc8b02b2dc0fc147585186e526174ac37949a78cc87aebd01d1e9cce55ff"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r68.html",
+      "bytes": 22840,
+      "sha256": "a12adb07b5656a8ec36fe2a5d88d8238534a11effe9646c84390cb02b18a72d4"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r69.html",
+      "bytes": 21909,
+      "sha256": "e606f8fe0799c0672c818a8d3290672e6ff521daccb157883718e78f86b4ce14"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r70.html",
+      "bytes": 24090,
+      "sha256": "2d0b4d974f6d10443f1d5fd89d50b109e5499e46e26a7ec20a1fc4b796d2b510"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r71.html",
+      "bytes": 29354,
+      "sha256": "4045ff323fad2c3b16caa305526c33ed7846f4b9af1540e475b3ffc8f4230f17"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r72.html",
+      "bytes": 43027,
+      "sha256": "533960f083a352fde5cb10314c831b9e99ddf3c96ce8a32ebb7004455ec7a93d"
+    },
+    {
+      "path": "archive/reports/indie-game-research-r73.html",
+      "bytes": 22992,
+      "sha256": "f528c51bd9b557af932c37be0b610ad71b36a9b0095b59b0ff20db043e6f8aba"
+    },
+    {
+      "path": "archive/reports/indie-game-research-synthesis.html",
+      "bytes": 100011,
+      "sha256": "df618ebaf857134bf8dca8058f68810b0263bd26080a41c6c70b3cc36b997060"
+    },
+    {
+      "path": "archive/reports/indie-game-stage-report-49.html",
+      "bytes": 18609,
+      "sha256": "638744c8914002279465825d8cd732936c7a8b45cb990a3d88f723b2f413e1d7"
+    },
+    {
+      "path": "archive/reports/indie-game-stage-report-51.html",
+      "bytes": 26504,
+      "sha256": "953f340c653f0176b1d6fc3ef889499718bd37b56024c038ab052e78226a921c"
+    },
+    {
+      "path": "archive/reports/indie-game-stage-report-53.html",
+      "bytes": 28238,
+      "sha256": "5a6dd6e0a975db2b717ea4892427da8023078582e09bea97ad485110d9dca00d"
+    },
+    {
+      "path": "archive/reports/indie-game-stage-report-60.html",
+      "bytes": 26797,
+      "sha256": "8327cea784100608904b2af70cb052b06b79e98446b8f7a543addb2d76731125"
+    },
+    {
+      "path": "archive/reports/indie-game-stage-report-62.html",
+      "bytes": 28992,
+      "sha256": "88def27d943274b99704250173876078c9e2be79a82599d9bedbcd76dcfc69c2"
+    },
+    {
+      "path": "archive/reports/indie-game-stage-report-68.html",
+      "bytes": 35810,
+      "sha256": "303ea5517f601cdd02aa7e37d25e953e8a128359c87d42dbf1059dfbe999fc92"
+    },
+    {
+      "path": "docs/decisions.md",
+      "bytes": 7404,
+      "sha256": "23f03034afca07109e1f8407536ba92e9762d8745dd49d06448b878619b8324d"
+    },
+    {
+      "path": "docs/evidence.md",
+      "bytes": 5686,
+      "sha256": "d8678f67d5c06e37cc427911f1ddadfc5ca0207f437a05a4de13498909d8d411"
+    },
+    {
+      "path": "docs/research-index.md",
+      "bytes": 9717,
+      "sha256": "bf90b07d00b85c2797e35f731caa6b87dff925b863a0e032a27c9c2c511fb581"
+    },
+    {
+      "path": "docs/round-74-incomplete.md",
+      "bytes": 2749,
+      "sha256": "373127dc06ed9df08510a016f298a1a5a25c7260142345ba9510774b15105017"
+    },
+    {
+      "path": "docs/summary.md",
+      "bytes": 12758,
+      "sha256": "fefee79587256007b442064ddc4aba237113f9bbc4a2281be6b466fab9228af6"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2943,
+      "sha256": "e57d5784ae6c3a06b1cd9236ab4f6a37f8d045b9e34ccc2bcf9f7e1e980b8400"
+    }
+  ],
+  "updated_at": "2026-10-16"
+}

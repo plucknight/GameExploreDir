@@ -1,0 +1,6 @@
+* text=auto
+.gitattributes text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.txt text eol=lf
+archive/reports/*.html -text
