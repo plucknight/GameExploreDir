@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "difficulty": "normal",
+  "status": "DESIGN_CANDIDATE_NOT_PLAYTESTED",
+  "documentation": "../design/normal/06-balance-and-pacing.md",
+  "scope": {
+    "base_characters": 10,
+    "dlc_characters": 2,
+    "starting_characters": 2,
+    "characters_per_team": 2,
+    "maximum_teams": 3,
+    "regions": 6,
+    "stages_per_region": 9,
+    "encounters_per_stage": 3,
+    "maximum_living_enemies": 3,
+    "maximum_total_summons_per_encounter": 2,
+    "elite_stage_index": 5,
+    "boss_stage_index": 9,
+    "market_stage_indices": [5, 7, 9]
+  },
+  "pacing": {
+    "target_hours": 56,
+    "region_budget_hours": [5, 7, 9, 10, 12, 13],
+    "clock": "non_overlapping_account_online_play_and_exploration_hours",
+    "reference_route": "self_found_two_main_characters_with_two_minimum_equipped_supply_teams",
+    "status": "NOT_VALIDATED",
+    "actual_recipe_costs": null,
+    "actual_resource_yields": null,
+    "actual_combat_measurements": null,
+    "notes": [
+      "Three simultaneous teams add output, not three account hours per wall-clock hour.",
+      "The 56-hour target is not a minimum enforced on all routes; market purchases can shorten preparation.",
+      "No simultaneous-boss requirement or compulsory investment in all characters is assumed.",
+      "The material-work recruitment model does not prove the 56-hour campaign duration."
+    ]
+  },
+  "growth": {
+    "normal_level_cap": 20,
+    "reserved_total_level_cap": 30,
+    "normal_weapon_cap": 34,
+    "reserved_total_weapon_cap": 48,
+    "attack_base": 20,
+    "attack_per_level_after_first": 2,
+    "starting_level": 1,
+    "starting_weapon": 8,
+    "region_end_levels": [4, 7, 10, 13, 16, 20],
+    "region_end_weapons": [12, 16, 20, 24, 29, 34],
+    "region_end_attacks": [38, 48, 58, 68, 79, 92],
+    "future_difficulty_rules": "NOT_DESIGNED"
+  },
+  "combat_constraints": {
+    "general_damage_bonus_cap": 0.5,
+    "target_vulnerability_cap": 0.2,
+    "attack_speed_bonus_cap": 0.4,
+    "critical_chance_cap": 0.35,
+    "critical_multiplier": 1.75,
+    "permanent_damage_reduction_cap": 0.35,
+    "temporary_damage_reduction_cap": 0.6,
+    "shield_capacity_fraction": 0.35,
+    "recovery_window_seconds": 20,
+    "effective_healing_and_new_shield_fraction_per_window": 0.6,
+    "recovery_reference": "target_maximum_hp_fixed_at_encounter_start",
+    "maximum_bonus_event_depth": 1,
+    "bonus_events_can_trigger_bonus_events": false,
+    "damage_over_time_can_crit": false,
+    "damage_over_time_applies_damage_bonus_twice": false,
+    "dodge_stat_enabled": false,
+    "bosses_use_stagger_instead_of_recursive_stun": true,
+    "summons_defer_when_living_enemy_cap_reached": true,
+    "summon_quota_refills_after_summon_death": false,
+    "post_battle_full_restore_seconds": 4,
+    "ordinary_encounter_timeout_seconds": 90,
+    "boss_encounter_timeout_seconds": 180,
+    "defeat_retreat_seconds": 30,
+    "post_battle_restoration_counts_against_next_battle_recovery": false,
+    "runtime_enforcement_status": "PROTOTYPE_PARTIAL_PRODUCTION_NOT_IMPLEMENTED"
+  },
+  "unlocks": {
+    "characters": {
+      "C03": "1-2", "C04": "1-3", "C05": "1-5", "C06": "1-5",
+      "C07": "1-9", "C08": "1-9", "C09": "2-3", "C10": "2-3"
+    },
+    "teams": [
+      {"teams": 2, "minimum_total_recruited": 4, "stage": "1-5", "reference_hour": 2.5},
+      {"teams": 3, "minimum_total_recruited": 6, "stage": "1-9", "reference_hour": 5.0}
+    ],
+    "dlc_counts_toward_team_roster": true,
+    "third_active_skill_choice": "2-7",
+    "second_charm_slot": "3-9",
+    "charm_evolutions": {
+      "trauma": "2-9", "purification": "3-3", "guard": "3-5",
+      "hunt_mark": "4-3", "charge": "4-5", "ember": "4-9"
+    }
+  },
+  "recruitment_model": {
+    "status": "ILLUSTRATIVE_MATERIAL_WORK_NOT_ACTUAL_LOOT",
+    "analysis_unit": "MU_equivalent_material_work_not_an_in_game_currency",
+    "material_income_starts_at_stage": "1-2",
+    "measured_income_start_delay_hours": null,
+    "material_work_per_team_hour": 60,
+    "fraction_allocated_to_recruitment": 0.7,
+    "base_recruitment_costs": [42, 63, 84, 105, 126, 147, 168, 189],
+    "dlc_recruitment_cost_each": 63,
+    "dlc_changes_base_cost_index": false,
+    "reference_stage_clear_hours": {"1-5": 2.5, "1-9": 5.0, "2-3": 7.5},
+    "illustrative_income_start_delays_hours": [0, 0.25, 0.5, 1],
+    "opening_target_hours": [10, 12],
+    "assumptions": [
+      "C03 and C04 qualifications are open by the corresponding affordability moments.",
+      "All recruitment materials are common normal materials accumulating from stage 1-2.",
+      "Material income continues during waiting for stage qualification; unspent materials are retained.",
+      "DLC costs are independent of the eight base-character recruitment steps.",
+      "Reference stage-clear times are design assumptions, not measured results.",
+      "The 10-12 hour target refers to the base-first opening route and remains unverified."
+    ]
+  },
+  "rare_model": {
+    "qualified_minutes_per_account_attempt": 15,
+    "base_event_probability": 0.1,
+    "hard_pity_attempt": 20,
+    "pity_scope": "difficulty_shared_between_regions",
+    "time_progress_scope": "region_and_difficulty",
+    "maximum_simultaneous_qualified_time_streams": 1,
+    "offline_time_qualifies": false,
+    "current_difficulty": "normal",
+    "normal_template_count": 24,
+    "equipment_templates_per_region": 3,
+    "catalyst_templates_per_region": 1,
+    "conditional_pool_weights": [1, 1, 1, 1],
+    "probability_of_one_named_equipment_given_event": 0.25,
+    "craft_spare_equipment_count": 3,
+    "craft_catalyst_count": 1,
+    "craft_requires_same_region_inputs_catalyst_and_output": true,
+    "unbound_collection_exchange_requires_region_access": false,
+    "equipment_use_and_personal_refinement_require_region_access": true,
+    "qualified_time_commit": "complete_three_encounter_run_success",
+    "failed_or_abandoned_run_qualified_seconds": 0,
+    "rare_target_selection": "one_explicit_team",
+    "rare_target_change_boundary": "run_complete_or_abandon_previous_run",
+    "mixed_binding_equipment_inputs_allowed": false,
+    "bound_equipment_can_return_to_market": false,
+    "real_steam_market_access_status": "NOT_VERIFIED",
+    "notes": [
+      "Only stages 5, 7 and 9 in each region are eligible in the design.",
+      "Eligibility is not proof of Steam access or a running entitlement/award service.",
+      "All acquisition times are qualified-exploration times, not account wall-clock times.",
+      "Hard pity guarantees a rare event, not a particular equipment template.",
+      "Permanent binding and finite crafting demand do not guarantee stable prices."
+    ]
+  }
+}

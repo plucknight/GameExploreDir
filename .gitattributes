@@ -4,3 +4,7 @@
 *.json text eol=lf
 *.txt text eol=lf
 archive/reports/*.html -text
+# Unity writes empty YAML values with a trailing space.
+*.asset text eol=lf whitespace=-blank-at-eol
+*.meta text eol=lf whitespace=-blank-at-eol
+*.unity text eol=lf whitespace=-blank-at-eol

@@ -1,0 +1,14 @@
+name: Normal campaign design checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  design:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check canonical and derived data
+        run: |
+          python3 tools/prepare_prototype.py --check
+          python3 tools/check_design.py
+          python3 -m unittest discover -s tests -v

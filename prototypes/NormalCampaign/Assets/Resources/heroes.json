@@ -1,0 +1,426 @@
+{
+  "schema_version": 1,
+  "numeric_status": "PROTOTYPE_ONLY",
+  "characters": [
+    {
+      "id": "C01",
+      "name": "薇拉",
+      "title": "灰盾侍卫",
+      "kind": "base",
+      "initial": true,
+      "unlock_stage": null,
+      "passive_intent": "保护与打断",
+      "skills": [
+        {
+          "id": "C01_S1",
+          "name": "盾护",
+          "effect": "shield",
+          "unlock_stage": null,
+          "prototype_cooldown_seconds": 8,
+          "prototype_power": 1.2
+        },
+        {
+          "id": "C01_S2",
+          "name": "盾击",
+          "effect": "interrupt",
+          "unlock_stage": null,
+          "prototype_cooldown_seconds": 10,
+          "prototype_power": 1.4
+        },
+        {
+          "id": "C01_S3",
+          "name": "反击架势",
+          "effect": "counter",
+          "unlock_stage": "2-7",
+          "prototype_cooldown_seconds": 12,
+          "prototype_power": 1.2
+        }
+      ]
+    },
+    {
+      "id": "C02",
+      "name": "洛恩",
+      "title": "巡林弓手",
+      "kind": "base",
+      "initial": true,
+      "unlock_stage": null,
+      "passive_intent": "标记与清场",
+      "skills": [
+        {
+          "id": "C02_S1",
+          "name": "猎标",
+          "effect": "mark",
+          "unlock_stage": null,
+          "prototype_cooldown_seconds": 8,
+          "prototype_power": 1.2
+        },
+        {
+          "id": "C02_S2",
+          "name": "扇射",
+          "effect": "aoe",
+          "unlock_stage": null,
+          "prototype_cooldown_seconds": 10,
+          "prototype_power": 1.4
+        },
+        {
+          "id": "C02_S3",
+          "name": "蓄势箭",
+          "effect": "heavy",
+          "unlock_stage": "2-7",
+          "prototype_cooldown_seconds": 12,
+          "prototype_power": 1.2
+        }
+      ]
+    },
+    {
+      "id": "C03",
+      "name": "瑟芙",
+      "title": "药草师",
+      "kind": "base",
+      "initial": false,
+      "unlock_stage": "1-2",
+      "passive_intent": "恢复与状态处理",
+      "skills": [
+        {
+          "id": "C03_S1",
+          "name": "草药恢复",
+          "effect": "heal",
+          "unlock_stage": null,
+          "prototype_cooldown_seconds": 8,
+          "prototype_power": 1.2
+        },
+        {
+          "id": "C03_S2",
+          "name": "解毒净化",
+          "effect": "cleanse",
+          "unlock_stage": null,
+          "prototype_cooldown_seconds": 10,
+          "prototype_power": 1.4
+        },
+        {
+          "id": "C03_S3",
+          "name": "毒性投掷",
+          "effect": "poison",
+          "unlock_stage": "2-7",
+          "prototype_cooldown_seconds": 12,
+          "prototype_power": 1.2
+        }
+      ]
+    },
+    {
+      "id": "C04",
+      "name": "布兰",
+      "title": "断岩斧卫",
+      "kind": "base",
+      "initial": false,
+      "unlock_stage": "1-3",
+      "passive_intent": "破甲与范围",
+      "skills": [
+        {
+          "id": "C04_S1",
+          "name": "破甲重击",
+          "effect": "break",
+          "unlock_stage": null,
+          "prototype_cooldown_seconds": 8,
+          "prototype_power": 1.2
+        },
+        {
+          "id": "C04_S2",
+          "name": "横扫",
+          "effect": "aoe",
+          "unlock_stage": null,
+          "prototype_cooldown_seconds": 10,
+          "prototype_power": 1.4
+        },
+        {
+          "id": "C04_S3",
+          "name": "坚守",
+          "effect": "shield",
+          "unlock_stage": "2-7",
+          "prototype_cooldown_seconds": 12,
+          "prototype_power": 1.2
+        }
+      ]
+    },
+    {
+      "id": "C05",
+      "name": "米菈",
+      "title": "灰烬术士",
+      "kind": "base",
+      "initial": false,
+      "unlock_stage": "1-5",
+      "passive_intent": "灼烧与引爆",
+      "skills": [
+        {
+          "id": "C05_S1",
+          "name": "灰烬灼烧",
+          "effect": "burn",
+          "unlock_stage": null,
+          "prototype_cooldown_seconds": 8,
+          "prototype_power": 1.2
+        },
+        {
+          "id": "C05_S2",
+          "name": "引爆灼烧",
+          "effect": "detonate",
+          "unlock_stage": null,
+          "prototype_cooldown_seconds": 10,
+          "prototype_power": 1.4
+        },
+        {
+          "id": "C05_S3",
+          "name": "火幕保护",
+          "effect": "shield",
+          "unlock_stage": "2-7",
+          "prototype_cooldown_seconds": 12,
+          "prototype_power": 1.2
+        }
+      ]
+    },
+    {
+      "id": "C06",
+      "name": "莫恩",
+      "title": "符文守卫",
+      "kind": "base",
+      "initial": false,
+      "unlock_stage": "1-5",
+      "passive_intent": "护盾与蓄能",
+      "skills": [
+        {
+          "id": "C06_S1",
+          "name": "符文护盾",
+          "effect": "shield",
+          "unlock_stage": null,
+          "prototype_cooldown_seconds": 8,
+          "prototype_power": 1.2
+        },
+        {
+          "id": "C06_S2",
+          "name": "蓄能打击",
+          "effect": "heavy",
+          "unlock_stage": null,
+          "prototype_cooldown_seconds": 10,
+          "prototype_power": 1.4
+        },
+        {
+          "id": "C06_S3",
+          "name": "符文爆裂",
+          "effect": "aoe",
+          "unlock_stage": "2-7",
+          "prototype_cooldown_seconds": 12,
+          "prototype_power": 1.2
+        }
+      ]
+    },
+    {
+      "id": "C07",
+      "name": "诺克",
+      "title": "影刃",
+      "kind": "base",
+      "initial": false,
+      "unlock_stage": "1-9",
+      "passive_intent": "后排与处决",
+      "skills": [
+        {
+          "id": "C07_S1",
+          "name": "后排突袭",
+          "effect": "backline",
+          "unlock_stage": null,
+          "prototype_cooldown_seconds": 8,
+          "prototype_power": 1.2
+        },
+        {
+          "id": "C07_S2",
+          "name": "处决低血目标",
+          "effect": "execute",
+          "unlock_stage": null,
+          "prototype_cooldown_seconds": 10,
+          "prototype_power": 1.4
+        },
+        {
+          "id": "C07_S3",
+          "name": "影步防护",
+          "effect": "shield",
+          "unlock_stage": "2-7",
+          "prototype_cooldown_seconds": 12,
+          "prototype_power": 1.2
+        }
+      ]
+    },
+    {
+      "id": "C08",
+      "name": "伊芙",
+      "title": "钟塔祭司",
+      "kind": "base",
+      "initial": false,
+      "unlock_stage": "1-9",
+      "passive_intent": "驱散与恢复",
+      "skills": [
+        {
+          "id": "C08_S1",
+          "name": "驱散强化",
+          "effect": "dispel",
+          "unlock_stage": null,
+          "prototype_cooldown_seconds": 8,
+          "prototype_power": 1.2
+        },
+        {
+          "id": "C08_S2",
+          "name": "应急恢复",
+          "effect": "heal",
+          "unlock_stage": null,
+          "prototype_cooldown_seconds": 10,
+          "prototype_power": 1.4
+        },
+        {
+          "id": "C08_S3",
+          "name": "祝福下一次攻击",
+          "effect": "mark",
+          "unlock_stage": "2-7",
+          "prototype_cooldown_seconds": 12,
+          "prototype_power": 1.2
+        }
+      ]
+    },
+    {
+      "id": "C09",
+      "name": "凯菈",
+      "title": "弩机工匠",
+      "kind": "base",
+      "initial": false,
+      "unlock_stage": "2-3",
+      "passive_intent": "打断与多段",
+      "skills": [
+        {
+          "id": "C09_S1",
+          "name": "制动弩",
+          "effect": "interrupt",
+          "unlock_stage": null,
+          "prototype_cooldown_seconds": 8,
+          "prototype_power": 1.2
+        },
+        {
+          "id": "C09_S2",
+          "name": "连射",
+          "effect": "multihit",
+          "unlock_stage": null,
+          "prototype_cooldown_seconds": 10,
+          "prototype_power": 1.4
+        },
+        {
+          "id": "C09_S3",
+          "name": "爆裂弹",
+          "effect": "aoe",
+          "unlock_stage": "2-7",
+          "prototype_cooldown_seconds": 12,
+          "prototype_power": 1.2
+        }
+      ]
+    },
+    {
+      "id": "C10",
+      "name": "赛恩",
+      "title": "潮汐术师",
+      "kind": "base",
+      "initial": false,
+      "unlock_stage": "2-3",
+      "passive_intent": "减速与保护",
+      "skills": [
+        {
+          "id": "C10_S1",
+          "name": "潮汐缓行",
+          "effect": "slow",
+          "unlock_stage": null,
+          "prototype_cooldown_seconds": 8,
+          "prototype_power": 1.2
+        },
+        {
+          "id": "C10_S2",
+          "name": "浪盾",
+          "effect": "shield",
+          "unlock_stage": null,
+          "prototype_cooldown_seconds": 10,
+          "prototype_power": 1.4
+        },
+        {
+          "id": "C10_S3",
+          "name": "波击",
+          "effect": "aoe",
+          "unlock_stage": "2-7",
+          "prototype_cooldown_seconds": 12,
+          "prototype_power": 1.2
+        }
+      ]
+    },
+    {
+      "id": "D01",
+      "name": "蕾娜",
+      "title": "誓约骑士",
+      "kind": "dlc",
+      "initial": false,
+      "unlock_stage": "1-2",
+      "passive_intent": "开荒保护",
+      "skills": [
+        {
+          "id": "D01_S1",
+          "name": "誓约保护",
+          "effect": "shield",
+          "unlock_stage": null,
+          "prototype_cooldown_seconds": 8,
+          "prototype_power": 1.2
+        },
+        {
+          "id": "D01_S2",
+          "name": "持续自持",
+          "effect": "heal",
+          "unlock_stage": null,
+          "prototype_cooldown_seconds": 10,
+          "prototype_power": 1.4
+        },
+        {
+          "id": "D01_S3",
+          "name": "突破打击",
+          "effect": "break",
+          "unlock_stage": "2-7",
+          "prototype_cooldown_seconds": 12,
+          "prototype_power": 1.2
+        }
+      ]
+    },
+    {
+      "id": "D02",
+      "name": "费恩",
+      "title": "炼金旅者",
+      "kind": "dlc",
+      "initial": false,
+      "unlock_stage": "1-2",
+      "passive_intent": "开荒容错",
+      "skills": [
+        {
+          "id": "D02_S1",
+          "name": "削弱药剂",
+          "effect": "dispel",
+          "unlock_stage": null,
+          "prototype_cooldown_seconds": 8,
+          "prototype_power": 1.2
+        },
+        {
+          "id": "D02_S2",
+          "name": "急救药剂",
+          "effect": "heal",
+          "unlock_stage": null,
+          "prototype_cooldown_seconds": 10,
+          "prototype_power": 1.4
+        },
+        {
+          "id": "D02_S3",
+          "name": "爆燃药剂",
+          "effect": "burn",
+          "unlock_stage": "2-7",
+          "prototype_cooldown_seconds": 12,
+          "prototype_power": 1.2
+        }
+      ]
+    }
+  ]
+}
