@@ -1,0 +1,23 @@
+# Unity-generated caches and local builds
+**/[Ll]ibrary/
+**/[Tt]emp/
+**/[Oo]bj/
+**/[Ll]ogs/
+**/[Uu]ser[Ss]ettings/
+**/[Bb]uilds/
+**/[Mm]emoryCaptures/
+**/[Rr]ecordings/
+**/.vs/
+**/*.csproj
+**/*.sln
+**/*.slnx
+**/*.user
+**/*.pidb
+**/*.pdb
+**/*.mdb
+**/sysinfo.txt
+__pycache__/
+*.pyc
+.pytest_cache/
+production/qa/evidence/local/
+production/session-state/local/

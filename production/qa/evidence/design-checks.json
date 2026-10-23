@@ -1,0 +1,40 @@
+{
+  "structural_status": "PASS",
+  "errors": [],
+  "pacing": {
+    "status": "NOT_VALIDATED",
+    "target_hours": 56,
+    "reason": "Missing measured combat, recipes and resource yields for the two-main-character route; no playtime simulation exists."
+  },
+  "runtime_combat_status": "NOT_ASSESSED_BY_STATIC_CHECKER",
+  "steam_integration_status": "NOT_VERIFIED",
+  "counts": {
+    "regions": 6,
+    "stages": 54,
+    "encounters": 162,
+    "market_templates": 24,
+    "monster_templates": 36,
+    "hero_definitions": 12
+  },
+  "timestamp_utc": "2026-10-23T02:04:54.370855+00:00",
+  "source_sha256": {
+    "data/normal-campaign.json": "1e2d2acd01a733d85098da2ecd9d17775bd2a16c245613e11dd9ff77a32ca3e9",
+    "data/balance-model.json": "91a3035f92efae4c5b057b191d906b13296ffd5569fff33cf8d5b01964a40f03",
+    "data/market-items.json": "8391be834718c707eb869c19901fa67d0752825ec7a876ea48e4dd65e4e9fdd7",
+    "data/characters.json": "d35802f5314a46618e2d1409f7e849fc4eb783c905e741a7012fd932a2cba404"
+  },
+  "rare_reference": {
+    "clock": "qualified_exploration_only",
+    "mean_event_qualified_hours": 2.1960583635235773,
+    "named_direct_mean_hours": 8.78423345409354,
+    "named_direct_or_crafting_mean_hours": 6.730512206724692,
+    "wall_clock_status": "NOT_VALIDATED_QUALIFIED_TIME_SHARE_UNKNOWN",
+    "market_price_status": "NOT_VALIDATED"
+  },
+  "python_tests": {
+    "status": "PASS",
+    "count": 31,
+    "command": "py -3 -m unittest discover -s tests -v"
+  },
+  "human_playtest_status": "NOT_RUN"
+}

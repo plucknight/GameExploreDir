@@ -1,0 +1,2339 @@
+{
+  "schema_version": 1,
+  "difficulty": "normal",
+  "documentation": {
+    "world": "../design/normal/03-world-and-stages.md",
+    "monsters": "../design/normal/04-monsters-and-bosses.md"
+  },
+  "regions": [
+    {
+      "id": 1,
+      "name": "断壁关隘",
+      "budget_hours": 5,
+      "end_level": 4,
+      "end_weapon": 12,
+      "end_attack": 38
+    },
+    {
+      "id": 2,
+      "name": "孢雾林地",
+      "budget_hours": 7,
+      "end_level": 7,
+      "end_weapon": 16,
+      "end_attack": 48
+    },
+    {
+      "id": 3,
+      "name": "沉钟墓园",
+      "budget_hours": 9,
+      "end_level": 10,
+      "end_weapon": 20,
+      "end_attack": 58
+    },
+    {
+      "id": 4,
+      "name": "熔炉工坊",
+      "budget_hours": 10,
+      "end_level": 13,
+      "end_weapon": 24,
+      "end_attack": 68
+    },
+    {
+      "id": 5,
+      "name": "霜晶回廊",
+      "budget_hours": 12,
+      "end_level": 16,
+      "end_weapon": 29,
+      "end_attack": 79
+    },
+    {
+      "id": 6,
+      "name": "星蚀圣所",
+      "budget_hours": 13,
+      "end_level": 20,
+      "end_weapon": 34,
+      "end_attack": 92
+    }
+  ],
+  "monsters": [
+    {
+      "id": "r1_footman",
+      "region": 1,
+      "name": "步卒",
+      "kind": "normal",
+      "mechanic": "基础近战攻击，不含隐藏抗性或成长词缀。",
+      "counterplay": [
+        "集中攻击尽早减少敌人数",
+        "用防护承担近战并持续输出"
+      ]
+    },
+    {
+      "id": "r1_shield_guard",
+      "region": 1,
+      "name": "盾兵",
+      "kind": "normal",
+      "mechanic": "举盾时保护自身及指定同伴；保护不等于无敌。",
+      "counterplay": [
+        "集中破防缩短保护时间",
+        "攻击可达的后排或等待举盾结束输出"
+      ]
+    },
+    {
+      "id": "r1_archer",
+      "region": 1,
+      "name": "弓手",
+      "kind": "normal",
+      "mechanic": "远程攻击；双弓遭遇错峰选定不同队员。",
+      "counterplay": [
+        "集中击杀较脆弱弓手",
+        "提前保护受瞄准队员并持续压制"
+      ]
+    },
+    {
+      "id": "r1_horn_caller",
+      "region": 1,
+      "name": "号手",
+      "kind": "normal",
+      "mechanic": "周期强化一名同伴；同名强化不无限叠加。",
+      "counterplay": [
+        "优先击败号手减少强化次数",
+        "清除强化或先击败被强化同伴"
+      ]
+    },
+    {
+      "id": "r1_flag_guard",
+      "region": 1,
+      "name": "精英旗卫",
+      "kind": "elite",
+      "mechanic": "在战旗展开后强化在场步卒；自身仍可受到正常伤害。",
+      "counterplay": [
+        "集中旗卫减少强化循环",
+        "快速清掉同伴后与旗卫单独交战"
+      ]
+    },
+    {
+      "id": "r1_gate_commander",
+      "region": 1,
+      "name": "关门统领",
+      "kind": "boss",
+      "mechanic": "举盾、蓄力重击、暴露三个阶段循环，不额外召唤。",
+      "counterplay": [
+        "集中破盾并利用暴露期输出",
+        "按蓄力条件保护队员，承受强击后反攻"
+      ]
+    },
+    {
+      "id": "r2_fungus_beast",
+      "region": 2,
+      "name": "菌兽",
+      "kind": "normal",
+      "mechanic": "低频施加中毒，毒层数受统一状态上限约束。",
+      "counterplay": [
+        "尽快击败菌兽减少中毒次数",
+        "用恢复、护盾或清除承受有限中毒"
+      ]
+    },
+    {
+      "id": "r2_sporecap",
+      "region": 2,
+      "name": "喷孢蕈",
+      "kind": "normal",
+      "mechanic": "存活时周期喷孢；双源错峰施放，同名毒仍受总上限约束。",
+      "counterplay": [
+        "优先处理喷孢来源",
+        "使用持续恢复或群体输出缩短暴露时间"
+      ]
+    },
+    {
+      "id": "r2_scavenger_bug",
+      "region": 2,
+      "name": "采食虫",
+      "kind": "normal",
+      "mechanic": "低生命，偏好攻击当前生命比例较低的队员。",
+      "counterplay": [
+        "迅速减员，减少低血量追击",
+        "保护或恢复被锁定队员后反击"
+      ]
+    },
+    {
+      "id": "r2_root_guard",
+      "region": 2,
+      "name": "腐根守卫",
+      "kind": "normal",
+      "mechanic": "保护一名孢子来源；根须保护不提供完全免疫。",
+      "counterplay": [
+        "集中破防后击败毒源",
+        "通过群体或可达后排攻击处理毒源"
+      ]
+    },
+    {
+      "id": "r2_spore_crown",
+      "region": 2,
+      "name": "孢冠菌兽",
+      "kind": "elite",
+      "mechanic": "蓄力后喷孢，喷孢后有清楚的疲弱空档；不召唤额外敌人。",
+      "counterplay": [
+        "压制或打断喷孢蓄力",
+        "用恢复和护盾承受喷孢，在空档集中输出"
+      ]
+    },
+    {
+      "id": "r2_root_mother",
+      "region": 2,
+      "name": "腐根母株",
+      "kind": "boss",
+      "mechanic": "以喷孢蕈作为囊体变体，整场最多生成2个；处理囊体降低后续喷发压力。",
+      "counterplay": [
+        "先清囊体再稳定攻击母株",
+        "在生存足够时集中母株尽快结束战斗"
+      ],
+      "summons": [
+        {
+          "monster_id": "r2_sporecap",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": "r3_bone_soldier",
+      "region": 3,
+      "name": "骸卒",
+      "kind": "normal",
+      "mechanic": "首次被击倒后仅复起1次，复起后的剩余生命量使用统一数值表；复起不新增奖励。",
+      "counterplay": [
+        "集中攻击完成两段生命",
+        "用群体伤害同时处理倒地与复起节奏"
+      ]
+    },
+    {
+      "id": "r3_bell_acolyte",
+      "region": 3,
+      "name": "鸣钟侍",
+      "kind": "normal",
+      "mechanic": "蓄力钟击后短暂停顿，强击伤害可通过防护承担。",
+      "counterplay": [
+        "打断或在蓄力完成前击败",
+        "预设防护后利用停顿集中输出"
+      ]
+    },
+    {
+      "id": "r3_soul_caller",
+      "region": 3,
+      "name": "引魂者",
+      "kind": "normal",
+      "mechanic": "每场最多召入1个本区骸卒；满员时仅等待空位，不新增召唤额度。",
+      "counterplay": [
+        "优先击败引魂者阻止召唤",
+        "接受有限增援并用群体输出清理"
+      ],
+      "summons": [
+        {
+          "monster_id": "r3_bone_soldier",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "r3_funeral_lantern",
+      "region": 3,
+      "name": "葬灯",
+      "kind": "normal",
+      "mechanic": "为一名同伴提供保护，不能叠出完全免疫或无限恢复。",
+      "counterplay": [
+        "先击破葬灯解除保护",
+        "维持输出击败受保护同伴"
+      ]
+    },
+    {
+      "id": "r3_bell_keeper",
+      "region": 3,
+      "name": "守钟人",
+      "kind": "elite",
+      "mechanic": "钟击与召唤交替；整场最多召入1个骸卒，不因阶段重复而重置次数。",
+      "counterplay": [
+        "集中本体减少循环并防护钟击",
+        "稳定清理有限增援后处理本体"
+      ],
+      "summons": [
+        {
+          "monster_id": "r3_bone_soldier",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "r3_sunken_bell_warden",
+      "region": 3,
+      "name": "沉钟执守",
+      "kind": "boss",
+      "mechanic": "护灯、钟击、疲弱阶段；整场最多生成1盏葬灯与1个骸卒。",
+      "counterplay": [
+        "先破护灯制造输出机会",
+        "用持续伤害与防护熬过保护，在疲弱期输出"
+      ],
+      "summons": [
+        {
+          "monster_id": "r3_funeral_lantern",
+          "count": 1
+        },
+        {
+          "monster_id": "r3_bone_soldier",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "r4_furnace_guard",
+      "region": 4,
+      "name": "炉卫",
+      "kind": "normal",
+      "mechanic": "拥有可击破护盾，护盾破裂后短暂暴露。",
+      "counterplay": [
+        "集中破盾抓住暴露期",
+        "用持续伤害和生存配置完成较慢路线"
+      ]
+    },
+    {
+      "id": "r4_repair_spider",
+      "region": 4,
+      "name": "修补蛛",
+      "kind": "normal",
+      "mechanic": "为炉卫恢复护盾；每只修补蛛整场最多成功维修2次，不恢复生命。",
+      "counterplay": [
+        "优先击败维修来源",
+        "用集中攻击在两次维修之间击破护盾"
+      ]
+    },
+    {
+      "id": "r4_charge_smith",
+      "region": 4,
+      "name": "蓄能匠",
+      "kind": "normal",
+      "mechanic": "缓慢蓄能后强击；蓄能可被打断，但强击不作为必死技能。",
+      "counterplay": [
+        "打断或集中击杀蓄能匠",
+        "保护受击队员后利用施放后空档"
+      ]
+    },
+    {
+      "id": "r4_slag_sprite",
+      "region": 4,
+      "name": "炉渣精",
+      "kind": "normal",
+      "mechanic": "低生命近战，主要检验多目标处理与技能是否过度施放。",
+      "counterplay": [
+        "用群体伤害快速清理",
+        "逐个集中击杀并保留关键技能"
+      ]
+    },
+    {
+      "id": "r4_overload_guard",
+      "region": 4,
+      "name": "过载炉卫",
+      "kind": "elite",
+      "mechanic": "维持重盾时不能蓄能；切换到蓄能时露出核心。",
+      "counterplay": [
+        "破盾后集中攻击核心",
+        "保留防护承担强击并利用冷却空档"
+      ]
+    },
+    {
+      "id": "r4_furnace_colossus",
+      "region": 4,
+      "name": "炉心巨像",
+      "kind": "boss",
+      "mechanic": "护壳、充能、冷却三阶段；不无限维修、不召唤新敌人。",
+      "counterplay": [
+        "压制或打断充能创造输出机会",
+        "承受可防护强击，在固定冷却窗口集中输出"
+      ]
+    },
+    {
+      "id": "r5_crystal_guard",
+      "region": 5,
+      "name": "晶卫",
+      "kind": "normal",
+      "mechanic": "晶甲受连续攻击削薄；恢复频率和上限由数值表定义，不超过初始晶甲。",
+      "counterplay": [
+        "使用多段或稳定攻击削薄晶甲",
+        "使用重击与破防减少晶甲有效保护"
+      ]
+    },
+    {
+      "id": "r5_frost_speaker",
+      "region": 5,
+      "name": "霜语者",
+      "kind": "normal",
+      "mechanic": "施加有上限的短时减速；不无限降低行动频率，不造成永久冻结。",
+      "counterplay": [
+        "优先处理来源或清除减速",
+        "使用低频高效技能与足够生存承受节奏损失"
+      ]
+    },
+    {
+      "id": "r5_prism",
+      "region": 5,
+      "name": "棱晶",
+      "kind": "normal",
+      "mechanic": "延长相连霜语者造成的减速，仍受统一持续时间上限限制；场上没有霜语者时只有基础攻击，不虚构减速来源。",
+      "counterplay": [
+        "先击破棱晶切断延长来源",
+        "集中霜语者阻止继续施加减速"
+      ]
+    },
+    {
+      "id": "r5_ice_hawk",
+      "region": 5,
+      "name": "冰隼",
+      "kind": "normal",
+      "mechanic": "优先袭击相对脆弱队员，攻击前有明确目标信号。",
+      "counterplay": [
+        "快速击败冰隼减少追击次数",
+        "保护较脆弱队员并持续输出"
+      ]
+    },
+    {
+      "id": "r5_ice_inspector",
+      "region": 5,
+      "name": "冰棱监察者",
+      "kind": "elite",
+      "mechanic": "减速阶段后开放脆弱窗口；不以硬性净化作为入场条件。",
+      "counterplay": [
+        "处理减速并抓住脆弱窗口",
+        "以低频高效技能保存输出，配合防护渡过减速阶段"
+      ]
+    },
+    {
+      "id": "r5_mirror_frost_beast",
+      "region": 5,
+      "name": "镜霜兽",
+      "kind": "boss",
+      "mechanic": "低频重击与快速追击交替；不生成独立镜像敌人。",
+      "counterplay": [
+        "用护盾应对重击并在间歇输出",
+        "用恢复承受追击并集中输出缩短阶段"
+      ]
+    },
+    {
+      "id": "r6_star_acolyte",
+      "region": 6,
+      "name": "星侍",
+      "kind": "normal",
+      "mechanic": "同一模板包含近战与远程表现变体；变体由遭遇槽规则决定，不增加新ID。",
+      "counterplay": [
+        "集中处理当前高威胁星侍",
+        "通过保护与稳定输出应对近远程组合"
+      ]
+    },
+    {
+      "id": "r6_eclipse_guard",
+      "region": 6,
+      "name": "蚀甲卫",
+      "kind": "normal",
+      "mechanic": "保护指定同伴，复用保护关系并提供正常可击破的防御。",
+      "counterplay": [
+        "集中破防解除保护",
+        "先处理可达的高威胁来源或使用范围输出"
+      ]
+    },
+    {
+      "id": "r6_rift_priest",
+      "region": 6,
+      "name": "裂隙司祭",
+      "kind": "normal",
+      "mechanic": "整场最多召入1名近战星侍，不因存活时间无限召唤。",
+      "counterplay": [
+        "优先击败司祭阻止增援",
+        "用群体输出处理有限增援后集中本体"
+      ],
+      "summons": [
+        {
+          "monster_id": "r6_star_acolyte",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "r6_stardust_envoy",
+      "region": 6,
+      "name": "星屑使",
+      "kind": "normal",
+      "mechanic": "蓄力后对两名队员造成范围攻击，不附加无提示秒杀。",
+      "counterplay": [
+        "打断或集中击杀星屑使",
+        "预设双人防护或恢复后利用施放空档"
+      ]
+    },
+    {
+      "id": "r6_sanctum_judge",
+      "region": 6,
+      "name": "圣所裁决者",
+      "kind": "elite",
+      "mechanic": "保护姿态与蓄力姿态交替，训练目标和技能条件的泛用配置。",
+      "counterplay": [
+        "持续破防并在暴露期集中输出",
+        "保留防护承担蓄力攻击后反攻"
+      ]
+    },
+    {
+      "id": "r6_star_eclipse_heart",
+      "region": 6,
+      "name": "星蚀之心",
+      "kind": "boss",
+      "mechanic": "有限三阶段：外壳、裂隙源、终结蓄力；最多生成1个星屑使作为裂隙源及1名近战星侍，不递归召唤。",
+      "counterplay": [
+        "破防与保护配合，压本体利用蓄力后空档",
+        "范围处理有限增援并用持续恢复维持输出"
+      ],
+      "summons": [
+        {
+          "monster_id": "r6_stardust_envoy",
+          "count": 1
+        },
+        {
+          "monster_id": "r6_star_acolyte",
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "stages": [
+    {
+      "id": "1-1",
+      "region": 1,
+      "index": 1,
+      "name": "碎石前哨",
+      "kind": "normal",
+      "predecessor": null,
+      "market_eligible": false,
+      "reward_focus": "material",
+      "decision": "认识普攻、自动技能与固定战后恢复。",
+      "counterplay": [
+        "集中攻击减少敌人数",
+        "用起始盾卫保护弓手完成稳定输出"
+      ],
+      "encounters": [
+        {
+          "enemies": [
+            "r1_footman"
+          ]
+        },
+        {
+          "enemies": [
+            "r1_footman",
+            "r1_footman"
+          ]
+        },
+        {
+          "enemies": [
+            "r1_footman"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1-2",
+      "region": 1,
+      "index": 2,
+      "name": "倒塌城门",
+      "kind": "normal",
+      "predecessor": "1-1",
+      "market_eligible": false,
+      "reward_focus": "equipment",
+      "decision": "观察举盾保护，选择持续攻击还是集中重击。",
+      "counterplay": [
+        "集中攻击尽快破防",
+        "利用举盾间隙保存技能后输出"
+      ],
+      "encounters": [
+        {
+          "enemies": [
+            "r1_footman"
+          ]
+        },
+        {
+          "enemies": [
+            "r1_shield_guard"
+          ]
+        },
+        {
+          "enemies": [
+            "r1_shield_guard"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1-3",
+      "region": 1,
+      "index": 3,
+      "name": "旧军械道",
+      "kind": "normal",
+      "predecessor": "1-2",
+      "market_eligible": false,
+      "reward_focus": "material",
+      "decision": "两名步卒形成减员顺序问题。",
+      "counterplay": [
+        "集中处理同一目标",
+        "使用范围伤害降低双目标总压力"
+      ],
+      "encounters": [
+        {
+          "enemies": [
+            "r1_footman",
+            "r1_footman"
+          ]
+        },
+        {
+          "enemies": [
+            "r1_footman"
+          ]
+        },
+        {
+          "enemies": [
+            "r1_footman",
+            "r1_footman"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1-4",
+      "region": 1,
+      "index": 4,
+      "name": "弩楼坡地",
+      "kind": "normal",
+      "predecessor": "1-3",
+      "market_eligible": false,
+      "reward_focus": "equipment",
+      "decision": "盾兵保护弓手，首次比较保护对象和输出来源。",
+      "counterplay": [
+        "集中击破盾兵后清理弓手",
+        "使用可达后排或范围攻击压制弓手"
+      ],
+      "encounters": [
+        {
+          "enemies": [
+            "r1_archer"
+          ]
+        },
+        {
+          "enemies": [
+            "r1_footman",
+            "r1_archer"
+          ]
+        },
+        {
+          "enemies": [
+            "r1_shield_guard",
+            "r1_archer"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1-5",
+      "region": 1,
+      "index": 5,
+      "name": "残旗营地·精英旗卫",
+      "kind": "elite",
+      "predecessor": "1-4",
+      "market_eligible": true,
+      "reward_focus": "elite",
+      "decision": "旗卫周期强化同伴，检验前四关的目标选择。",
+      "counterplay": [
+        "集中击败旗卫减少强化循环",
+        "先清掉步卒让强化失去对象"
+      ],
+      "encounters": [
+        {
+          "enemies": [
+            "r1_footman",
+            "r1_footman"
+          ]
+        },
+        {
+          "enemies": [
+            "r1_shield_guard",
+            "r1_footman"
+          ]
+        },
+        {
+          "enemies": [
+            "r1_flag_guard",
+            "r1_footman"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1-6",
+      "region": 1,
+      "index": 6,
+      "name": "号角废营",
+      "kind": "normal",
+      "predecessor": "1-5",
+      "market_eligible": false,
+      "reward_focus": "material",
+      "decision": "号手强化步卒，练习直接处理支援来源。",
+      "counterplay": [
+        "优先击败号手",
+        "清除强化或先击败被强化同伴"
+      ],
+      "encounters": [
+        {
+          "enemies": [
+            "r1_footman"
+          ]
+        },
+        {
+          "enemies": [
+            "r1_horn_caller"
+          ]
+        },
+        {
+          "enemies": [
+            "r1_horn_caller",
+            "r1_footman"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1-7",
+      "region": 1,
+      "index": 7,
+      "name": "双哨长廊",
+      "kind": "normal",
+      "predecessor": "1-6",
+      "market_eligible": true,
+      "reward_focus": "equipment",
+      "decision": "两名弓手错峰瞄准不同队员。",
+      "counterplay": [
+        "集中击杀一名弓手减少目标切换",
+        "按受击信号保护较脆弱队员"
+      ],
+      "encounters": [
+        {
+          "enemies": [
+            "r1_archer"
+          ]
+        },
+        {
+          "enemies": [
+            "r1_footman",
+            "r1_archer"
+          ]
+        },
+        {
+          "enemies": [
+            "r1_archer",
+            "r1_archer"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1-8",
+      "region": 1,
+      "index": 8,
+      "name": "内城防线",
+      "kind": "normal",
+      "predecessor": "1-7",
+      "market_eligible": false,
+      "reward_focus": "mixed",
+      "decision": "盾兵、号手和步卒组成保护与强化关系。",
+      "counterplay": [
+        "集中破盾后击败号手",
+        "先压制可达支援或清除强化"
+      ],
+      "encounters": [
+        {
+          "enemies": [
+            "r1_shield_guard",
+            "r1_footman"
+          ]
+        },
+        {
+          "enemies": [
+            "r1_horn_caller",
+            "r1_footman"
+          ]
+        },
+        {
+          "enemies": [
+            "r1_shield_guard",
+            "r1_horn_caller",
+            "r1_footman"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1-9",
+      "region": 1,
+      "index": 9,
+      "name": "关隘王庭·关门统领",
+      "kind": "boss",
+      "predecessor": "1-8",
+      "market_eligible": true,
+      "reward_focus": "boss",
+      "decision": "关门统领举盾、重击和暴露循环，形成首个地区突破。",
+      "counterplay": [
+        "集中破防并利用暴露期",
+        "按蓄力条件防护后反攻"
+      ],
+      "encounters": [
+        {
+          "enemies": [
+            "r1_shield_guard",
+            "r1_archer"
+          ]
+        },
+        {
+          "enemies": [
+            "r1_horn_caller",
+            "r1_footman",
+            "r1_footman"
+          ]
+        },
+        {
+          "enemies": [
+            "r1_gate_commander"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2-1",
+      "region": 2,
+      "index": 1,
+      "name": "苔根浅滩",
+      "kind": "normal",
+      "predecessor": "1-9",
+      "market_eligible": false,
+      "reward_focus": "material",
+      "decision": "菌兽低频附毒，认识持续伤害。",
+      "counterplay": [
+        "尽快击败菌兽减少中毒次数",
+        "用恢复、护盾或清除处理有限中毒"
+      ],
+      "encounters": [
+        {
+          "enemies": [
+            "r2_fungus_beast"
+          ]
+        },
+        {
+          "enemies": [
+            "r2_scavenger_bug"
+          ]
+        },
+        {
+          "enemies": [
+            "r2_fungus_beast"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2-2",
+      "region": 2,
+      "index": 2,
+      "name": "飘孢洼地",
+      "kind": "normal",
+      "predecessor": "2-1",
+      "market_eligible": false,
+      "reward_focus": "equipment",
+      "decision": "喷孢蕈持续施加中毒，比较来源击杀和持续承受。",
+      "counterplay": [
+        "优先击败喷孢蕈",
+        "用持续恢复并缩短暴露时间"
+      ],
+      "encounters": [
+        {
+          "enemies": [
+            "r2_fungus_beast"
+          ]
+        },
+        {
+          "enemies": [
+            "r2_sporecap"
+          ]
+        },
+        {
+          "enemies": [
+            "r2_sporecap",
+            "r2_scavenger_bug"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2-3",
+      "region": 2,
+      "index": 3,
+      "name": "腐叶虫巢",
+      "kind": "normal",
+      "predecessor": "2-2",
+      "market_eligible": false,
+      "reward_focus": "material",
+      "decision": "低生命采食虫追击较弱队员；本体招募来源最迟在此已全部可达。",
+      "counterplay": [
+        "快速集中减员",
+        "保护或恢复被追击队员"
+      ],
+      "encounters": [
+        {
+          "enemies": [
+            "r2_scavenger_bug"
+          ]
+        },
+        {
+          "enemies": [
+            "r2_scavenger_bug",
+            "r2_scavenger_bug"
+          ]
+        },
+        {
+          "enemies": [
+            "r2_scavenger_bug",
+            "r2_scavenger_bug"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2-4",
+      "region": 2,
+      "index": 4,
+      "name": "缠根密林",
+      "kind": "normal",
+      "predecessor": "2-3",
+      "market_eligible": false,
+      "reward_focus": "equipment",
+      "decision": "腐根守卫保护毒源，组合保护关系与持续伤害。",
+      "counterplay": [
+        "集中破防后击败毒源",
+        "使用群体或可达后排攻击处理喷孢蕈"
+      ],
+      "encounters": [
+        {
+          "enemies": [
+            "r2_root_guard"
+          ]
+        },
+        {
+          "enemies": [
+            "r2_fungus_beast",
+            "r2_scavenger_bug"
+          ]
+        },
+        {
+          "enemies": [
+            "r2_root_guard",
+            "r2_sporecap"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2-5",
+      "region": 2,
+      "index": 5,
+      "name": "孢冠领地·孢冠菌兽",
+      "kind": "elite",
+      "predecessor": "2-4",
+      "market_eligible": true,
+      "reward_focus": "elite",
+      "decision": "孢冠菌兽蓄力喷孢后出现疲弱空档。",
+      "counterplay": [
+        "压制或打断喷孢",
+        "承受有限毒伤并在空档集中输出"
+      ],
+      "encounters": [
+        {
+          "enemies": [
+            "r2_fungus_beast",
+            "r2_scavenger_bug"
+          ]
+        },
+        {
+          "enemies": [
+            "r2_root_guard",
+            "r2_sporecap"
+          ]
+        },
+        {
+          "enemies": [
+            "r2_spore_crown"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2-6",
+      "region": 2,
+      "index": 6,
+      "name": "菌兽迁径",
+      "kind": "normal",
+      "predecessor": "2-5",
+      "market_eligible": false,
+      "reward_focus": "material",
+      "decision": "菌兽和采食虫检验已学应对，强度较精英关回落。",
+      "counterplay": [
+        "先减少附毒来源",
+        "先清采食虫保护低血量队员"
+      ],
+      "encounters": [
+        {
+          "enemies": [
+            "r2_fungus_beast"
+          ]
+        },
+        {
+          "enemies": [
+            "r2_scavenger_bug",
+            "r2_scavenger_bug"
+          ]
+        },
+        {
+          "enemies": [
+            "r2_fungus_beast",
+            "r2_scavenger_bug"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2-7",
+      "region": 2,
+      "index": 7,
+      "name": "双蕈毒池",
+      "kind": "normal",
+      "predecessor": "2-6",
+      "market_eligible": true,
+      "reward_focus": "equipment",
+      "decision": "两个喷孢源错峰施放，比较群清和逐个处理。",
+      "counterplay": [
+        "集中击杀一个毒源降低覆盖率",
+        "使用群体输出及持续恢复"
+      ],
+      "encounters": [
+        {
+          "enemies": [
+            "r2_sporecap"
+          ]
+        },
+        {
+          "enemies": [
+            "r2_fungus_beast",
+            "r2_scavenger_bug"
+          ]
+        },
+        {
+          "enemies": [
+            "r2_sporecap",
+            "r2_sporecap"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2-8",
+      "region": 2,
+      "index": 8,
+      "name": "寄生温床",
+      "kind": "normal",
+      "predecessor": "2-7",
+      "market_eligible": false,
+      "reward_focus": "mixed",
+      "decision": "守卫、喷孢蕈、采食虫同时施加保护、毒与追击压力。",
+      "counterplay": [
+        "先破保护并压制毒源",
+        "先快速减员并保住较弱队员"
+      ],
+      "encounters": [
+        {
+          "enemies": [
+            "r2_root_guard",
+            "r2_scavenger_bug"
+          ]
+        },
+        {
+          "enemies": [
+            "r2_fungus_beast",
+            "r2_sporecap"
+          ]
+        },
+        {
+          "enemies": [
+            "r2_root_guard",
+            "r2_sporecap",
+            "r2_scavenger_bug"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2-9",
+      "region": 2,
+      "index": 9,
+      "name": "腐根母巢·腐根母株",
+      "kind": "boss",
+      "predecessor": "2-8",
+      "market_eligible": true,
+      "reward_focus": "boss",
+      "decision": "腐根母株有限生成囊体，清囊和集中本体都有代价。",
+      "counterplay": [
+        "先清囊体降低喷发压力",
+        "在生存足够时集中母株结束战斗"
+      ],
+      "encounters": [
+        {
+          "enemies": [
+            "r2_root_guard",
+            "r2_sporecap"
+          ]
+        },
+        {
+          "enemies": [
+            "r2_fungus_beast",
+            "r2_scavenger_bug",
+            "r2_scavenger_bug"
+          ]
+        },
+        {
+          "enemies": [
+            "r2_root_mother"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3-1",
+      "region": 3,
+      "index": 1,
+      "name": "无名墓道",
+      "kind": "normal",
+      "predecessor": "2-9",
+      "market_eligible": false,
+      "reward_focus": "material",
+      "decision": "骸卒仅复起一次，认识可预见的第二段生命。",
+      "counterplay": [
+        "集中目标完成两段生命",
+        "用范围伤害覆盖复起节奏"
+      ],
+      "encounters": [
+        {
+          "enemies": [
+            "r3_bone_soldier"
+          ]
+        },
+        {
+          "enemies": [
+            "r3_bone_soldier"
+          ]
+        },
+        {
+          "enemies": [
+            "r3_bone_soldier",
+            "r3_bone_soldier"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3-2",
+      "region": 3,
+      "index": 2,
+      "name": "裂钟阶梯",
+      "kind": "normal",
+      "predecessor": "3-1",
+      "market_eligible": false,
+      "reward_focus": "equipment",
+      "decision": "鸣钟侍蓄力强击后停顿。",
+      "counterplay": [
+        "集中击杀或打断钟击",
+        "提前防护并利用停顿输出"
+      ],
+      "encounters": [
+        {
+          "enemies": [
+            "r3_bone_soldier"
+          ]
+        },
+        {
+          "enemies": [
+            "r3_bell_acolyte"
+          ]
+        },
+        {
+          "enemies": [
+            "r3_bell_acolyte",
+            "r3_bone_soldier"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3-3",
+      "region": 3,
+      "index": 3,
+      "name": "引魂回廊",
+      "kind": "normal",
+      "predecessor": "3-2",
+      "market_eligible": false,
+      "reward_focus": "material",
+      "decision": "引魂者只有有限召唤，比较压源头与清增援。",
+      "counterplay": [
+        "优先击败引魂者",
+        "接受有限骸卒增援后群体清理"
+      ],
+      "encounters": [
+        {
+          "enemies": [
+            "r3_bone_soldier"
+          ]
+        },
+        {
+          "enemies": [
+            "r3_soul_caller"
+          ]
+        },
+        {
+          "enemies": [
+            "r3_soul_caller",
+            "r3_bone_soldier"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3-4",
+      "region": 3,
+      "index": 4,
+      "name": "葬灯侧殿",
+      "kind": "normal",
+      "predecessor": "3-3",
+      "market_eligible": false,
+      "reward_focus": "equipment",
+      "decision": "葬灯保护骸卒，处理保护源而非隐藏免疫。",
+      "counterplay": [
+        "先击破葬灯",
+        "维持集中输出处理受保护骸卒"
+      ],
+      "encounters": [
+        {
+          "enemies": [
+            "r3_funeral_lantern"
+          ]
+        },
+        {
+          "enemies": [
+            "r3_bone_soldier",
+            "r3_bone_soldier"
+          ]
+        },
+        {
+          "enemies": [
+            "r3_funeral_lantern",
+            "r3_bone_soldier"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3-5",
+      "region": 3,
+      "index": 5,
+      "name": "守钟厅·守钟人",
+      "kind": "elite",
+      "predecessor": "3-4",
+      "market_eligible": true,
+      "reward_focus": "elite",
+      "decision": "守钟人交替钟击与有限召唤。",
+      "counterplay": [
+        "集中本体减少循环并防护钟击",
+        "先稳定清理有限增援"
+      ],
+      "encounters": [
+        {
+          "enemies": [
+            "r3_bell_acolyte",
+            "r3_bone_soldier"
+          ]
+        },
+        {
+          "enemies": [
+            "r3_soul_caller",
+            "r3_bone_soldier"
+          ]
+        },
+        {
+          "enemies": [
+            "r3_bell_keeper"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3-6",
+      "region": 3,
+      "index": 6,
+      "name": "断骨桥",
+      "kind": "normal",
+      "predecessor": "3-5",
+      "market_eligible": false,
+      "reward_focus": "material",
+      "decision": "两骸卒检查清场速度，防止关键技能过度施放。",
+      "counterplay": [
+        "按低生命条件保留强技能",
+        "用范围技能同时处理两段生命"
+      ],
+      "encounters": [
+        {
+          "enemies": [
+            "r3_bone_soldier"
+          ]
+        },
+        {
+          "enemies": [
+            "r3_bone_soldier",
+            "r3_bone_soldier"
+          ]
+        },
+        {
+          "enemies": [
+            "r3_bone_soldier",
+            "r3_bone_soldier"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3-7",
+      "region": 3,
+      "index": 7,
+      "name": "双声祭廊",
+      "kind": "normal",
+      "predecessor": "3-6",
+      "market_eligible": true,
+      "reward_focus": "equipment",
+      "decision": "钟击和引魂同时存在，选择哪种威胁优先。",
+      "counterplay": [
+        "优先处理鸣钟侍降低爆发压力",
+        "优先处理引魂者限制增援"
+      ],
+      "encounters": [
+        {
+          "enemies": [
+            "r3_bell_acolyte"
+          ]
+        },
+        {
+          "enemies": [
+            "r3_soul_caller",
+            "r3_bone_soldier"
+          ]
+        },
+        {
+          "enemies": [
+            "r3_bell_acolyte",
+            "r3_soul_caller"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3-8",
+      "region": 3,
+      "index": 8,
+      "name": "返魂墓室",
+      "kind": "normal",
+      "predecessor": "3-7",
+      "market_eligible": false,
+      "reward_focus": "mixed",
+      "decision": "葬灯、引魂者和骸卒形成保护与有限复起组合。",
+      "counterplay": [
+        "先清保护源再压引魂者",
+        "用范围输出处理有限群体后集中本体"
+      ],
+      "encounters": [
+        {
+          "enemies": [
+            "r3_funeral_lantern",
+            "r3_bone_soldier"
+          ]
+        },
+        {
+          "enemies": [
+            "r3_bell_acolyte",
+            "r3_bone_soldier"
+          ]
+        },
+        {
+          "enemies": [
+            "r3_soul_caller",
+            "r3_funeral_lantern",
+            "r3_bone_soldier"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3-9",
+      "region": 3,
+      "index": 9,
+      "name": "沉钟大殿·沉钟执守",
+      "kind": "boss",
+      "predecessor": "3-8",
+      "market_eligible": true,
+      "reward_focus": "boss",
+      "decision": "沉钟执守以单纹章槽可通配置检验护灯、钟击与疲弱阶段。",
+      "counterplay": [
+        "优先护灯制造输出机会",
+        "以持续伤害和防护度过保护阶段"
+      ],
+      "encounters": [
+        {
+          "enemies": [
+            "r3_bell_acolyte",
+            "r3_funeral_lantern"
+          ]
+        },
+        {
+          "enemies": [
+            "r3_soul_caller",
+            "r3_bone_soldier"
+          ]
+        },
+        {
+          "enemies": [
+            "r3_sunken_bell_warden"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4-1",
+      "region": 4,
+      "index": 1,
+      "name": "废炉入口",
+      "kind": "normal",
+      "predecessor": "3-9",
+      "market_eligible": false,
+      "reward_focus": "material",
+      "decision": "在可使用双纹章的阶段重新观察可击破护盾。",
+      "counterplay": [
+        "用协同效果集中破盾",
+        "用生存配置维持输出完成较慢路线"
+      ],
+      "encounters": [
+        {
+          "enemies": [
+            "r4_slag_sprite"
+          ]
+        },
+        {
+          "enemies": [
+            "r4_furnace_guard"
+          ]
+        },
+        {
+          "enemies": [
+            "r4_furnace_guard"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4-2",
+      "region": 4,
+      "index": 2,
+      "name": "蓄能轨道",
+      "kind": "normal",
+      "predecessor": "4-1",
+      "market_eligible": false,
+      "reward_focus": "equipment",
+      "decision": "蓄能匠强击检验打断或预先防护。",
+      "counterplay": [
+        "集中击杀或打断蓄能",
+        "提前保护目标并在施放后反攻"
+      ],
+      "encounters": [
+        {
+          "enemies": [
+            "r4_slag_sprite"
+          ]
+        },
+        {
+          "enemies": [
+            "r4_charge_smith"
+          ]
+        },
+        {
+          "enemies": [
+            "r4_charge_smith",
+            "r4_slag_sprite"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4-3",
+      "region": 4,
+      "index": 3,
+      "name": "炉渣沟",
+      "kind": "normal",
+      "predecessor": "4-2",
+      "market_eligible": false,
+      "reward_focus": "material",
+      "decision": "炉渣精分组出现，比较群体技能和逐个减员。",
+      "counterplay": [
+        "使用群体输出清场",
+        "逐个集中击杀并避免强技能浪费"
+      ],
+      "encounters": [
+        {
+          "enemies": [
+            "r4_slag_sprite",
+            "r4_slag_sprite"
+          ]
+        },
+        {
+          "enemies": [
+            "r4_slag_sprite"
+          ]
+        },
+        {
+          "enemies": [
+            "r4_slag_sprite",
+            "r4_slag_sprite",
+            "r4_slag_sprite"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4-4",
+      "region": 4,
+      "index": 4,
+      "name": "维修平台",
+      "kind": "normal",
+      "predecessor": "4-3",
+      "market_eligible": false,
+      "reward_focus": "equipment",
+      "decision": "修补蛛有限维修炉卫护盾。",
+      "counterplay": [
+        "先击败维修来源",
+        "集中攻击在两次维修之间破盾"
+      ],
+      "encounters": [
+        {
+          "enemies": [
+            "r4_furnace_guard"
+          ]
+        },
+        {
+          "enemies": [
+            "r4_repair_spider",
+            "r4_slag_sprite"
+          ]
+        },
+        {
+          "enemies": [
+            "r4_furnace_guard",
+            "r4_repair_spider"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4-5",
+      "region": 4,
+      "index": 5,
+      "name": "过载闸门·过载炉卫",
+      "kind": "elite",
+      "predecessor": "4-4",
+      "market_eligible": true,
+      "reward_focus": "elite",
+      "decision": "过载炉卫重盾和蓄能互斥，观察切换时的核心。",
+      "counterplay": [
+        "破盾后集中攻击核心",
+        "保留防护应对蓄能并利用空档"
+      ],
+      "encounters": [
+        {
+          "enemies": [
+            "r4_furnace_guard",
+            "r4_slag_sprite"
+          ]
+        },
+        {
+          "enemies": [
+            "r4_charge_smith",
+            "r4_slag_sprite"
+          ]
+        },
+        {
+          "enemies": [
+            "r4_overload_guard"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4-6",
+      "region": 4,
+      "index": 6,
+      "name": "热流管廊",
+      "kind": "normal",
+      "predecessor": "4-5",
+      "market_eligible": false,
+      "reward_focus": "material",
+      "decision": "蓄能匠与低生命炉渣精，练习目标和技能顺序。",
+      "counterplay": [
+        "先清炉渣减少持续压力",
+        "优先压制蓄能匠防止强击"
+      ],
+      "encounters": [
+        {
+          "enemies": [
+            "r4_slag_sprite",
+            "r4_slag_sprite"
+          ]
+        },
+        {
+          "enemies": [
+            "r4_charge_smith"
+          ]
+        },
+        {
+          "enemies": [
+            "r4_charge_smith",
+            "r4_slag_sprite"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4-7",
+      "region": 4,
+      "index": 7,
+      "name": "双炉充能室",
+      "kind": "normal",
+      "predecessor": "4-6",
+      "market_eligible": true,
+      "reward_focus": "equipment",
+      "decision": "两名蓄能匠错峰施法，单次打断不能覆盖全部威胁。",
+      "counterplay": [
+        "集中击杀一名蓄能匠",
+        "交替防护和打断应对剩余强击"
+      ],
+      "encounters": [
+        {
+          "enemies": [
+            "r4_charge_smith"
+          ]
+        },
+        {
+          "enemies": [
+            "r4_furnace_guard",
+            "r4_slag_sprite"
+          ]
+        },
+        {
+          "enemies": [
+            "r4_charge_smith",
+            "r4_charge_smith"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4-8",
+      "region": 4,
+      "index": 8,
+      "name": "核心装配线",
+      "kind": "normal",
+      "predecessor": "4-7",
+      "market_eligible": false,
+      "reward_focus": "mixed",
+      "decision": "炉卫、修补蛛与蓄能匠要求选择维修或强击优先。",
+      "counterplay": [
+        "先断维修再破盾",
+        "先限制强击并用集中输出突破"
+      ],
+      "encounters": [
+        {
+          "enemies": [
+            "r4_furnace_guard",
+            "r4_repair_spider"
+          ]
+        },
+        {
+          "enemies": [
+            "r4_charge_smith",
+            "r4_slag_sprite"
+          ]
+        },
+        {
+          "enemies": [
+            "r4_furnace_guard",
+            "r4_repair_spider",
+            "r4_charge_smith"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4-9",
+      "region": 4,
+      "index": 9,
+      "name": "炉心大厅·炉心巨像",
+      "kind": "boss",
+      "predecessor": "4-8",
+      "market_eligible": true,
+      "reward_focus": "boss",
+      "decision": "炉心巨像护壳、充能、冷却循环。",
+      "counterplay": [
+        "压制充能并制造输出窗口",
+        "承受可防护强击，在冷却阶段集中输出"
+      ],
+      "encounters": [
+        {
+          "enemies": [
+            "r4_furnace_guard",
+            "r4_charge_smith"
+          ]
+        },
+        {
+          "enemies": [
+            "r4_furnace_guard",
+            "r4_repair_spider",
+            "r4_slag_sprite"
+          ]
+        },
+        {
+          "enemies": [
+            "r4_furnace_colossus"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5-1",
+      "region": 5,
+      "index": 1,
+      "name": "寒雾入口",
+      "kind": "normal",
+      "predecessor": "4-9",
+      "market_eligible": false,
+      "reward_focus": "material",
+      "decision": "霜语者短时减速，认识行动节奏变化。",
+      "counterplay": [
+        "优先处理或清除减速来源",
+        "用低频高效技能承受节奏损失"
+      ],
+      "encounters": [
+        {
+          "enemies": [
+            "r5_crystal_guard"
+          ]
+        },
+        {
+          "enemies": [
+            "r5_frost_speaker"
+          ]
+        },
+        {
+          "enemies": [
+            "r5_frost_speaker"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5-2",
+      "region": 5,
+      "index": 2,
+      "name": "冰隼崖道",
+      "kind": "normal",
+      "predecessor": "5-1",
+      "market_eligible": false,
+      "reward_focus": "equipment",
+      "decision": "冰隼攻击较脆弱队员，检验双人保护覆盖。",
+      "counterplay": [
+        "快速减员减少追击",
+        "保护或恢复较脆弱队员"
+      ],
+      "encounters": [
+        {
+          "enemies": [
+            "r5_ice_hawk"
+          ]
+        },
+        {
+          "enemies": [
+            "r5_crystal_guard"
+          ]
+        },
+        {
+          "enemies": [
+            "r5_ice_hawk",
+            "r5_ice_hawk"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5-3",
+      "region": 5,
+      "index": 3,
+      "name": "层晶矿脉",
+      "kind": "normal",
+      "predecessor": "5-2",
+      "market_eligible": false,
+      "reward_focus": "material",
+      "decision": "晶甲在连续受击时削薄，比较频率与单次效果。",
+      "counterplay": [
+        "用多段和持续攻击削甲",
+        "用重击及破防缩短有效防护"
+      ],
+      "encounters": [
+        {
+          "enemies": [
+            "r5_crystal_guard"
+          ]
+        },
+        {
+          "enemies": [
+            "r5_ice_hawk"
+          ]
+        },
+        {
+          "enemies": [
+            "r5_crystal_guard",
+            "r5_crystal_guard"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5-4",
+      "region": 5,
+      "index": 4,
+      "name": "棱镜冰庭",
+      "kind": "normal",
+      "predecessor": "5-3",
+      "market_eligible": false,
+      "reward_focus": "equipment",
+      "decision": "棱晶延长霜语者减速，但仍受总上限。",
+      "counterplay": [
+        "先击破棱晶",
+        "优先霜语者减少减速施加"
+      ],
+      "encounters": [
+        {
+          "enemies": [
+            "r5_prism"
+          ]
+        },
+        {
+          "enemies": [
+            "r5_frost_speaker"
+          ]
+        },
+        {
+          "enemies": [
+            "r5_prism",
+            "r5_frost_speaker"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5-5",
+      "region": 5,
+      "index": 5,
+      "name": "监察冰座·冰棱监察者",
+      "kind": "elite",
+      "predecessor": "5-4",
+      "market_eligible": true,
+      "reward_focus": "elite",
+      "decision": "冰棱监察者减速后开放脆弱窗口。",
+      "counterplay": [
+        "处理减速并集中窗口输出",
+        "以低频高效技能和防护渡过减速"
+      ],
+      "encounters": [
+        {
+          "enemies": [
+            "r5_crystal_guard",
+            "r5_ice_hawk"
+          ]
+        },
+        {
+          "enemies": [
+            "r5_prism",
+            "r5_frost_speaker"
+          ]
+        },
+        {
+          "enemies": [
+            "r5_ice_inspector"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5-6",
+      "region": 5,
+      "index": 6,
+      "name": "裂晶栈道",
+      "kind": "normal",
+      "predecessor": "5-5",
+      "market_eligible": false,
+      "reward_focus": "material",
+      "decision": "晶卫与冰隼把破甲与保护较弱队员结合。",
+      "counterplay": [
+        "先清冰隼减少追击",
+        "保护较弱队员并稳定削甲"
+      ],
+      "encounters": [
+        {
+          "enemies": [
+            "r5_crystal_guard"
+          ]
+        },
+        {
+          "enemies": [
+            "r5_ice_hawk",
+            "r5_ice_hawk"
+          ]
+        },
+        {
+          "enemies": [
+            "r5_crystal_guard",
+            "r5_ice_hawk"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5-7",
+      "region": 5,
+      "index": 7,
+      "name": "双咏回廊",
+      "kind": "normal",
+      "predecessor": "5-6",
+      "market_eligible": true,
+      "reward_focus": "equipment",
+      "decision": "两霜语者错峰施法，比较来源处理和抗节奏损失。",
+      "counterplay": [
+        "集中击杀一个施法来源",
+        "选择低频高效技能并维持生存"
+      ],
+      "encounters": [
+        {
+          "enemies": [
+            "r5_frost_speaker"
+          ]
+        },
+        {
+          "enemies": [
+            "r5_crystal_guard",
+            "r5_ice_hawk"
+          ]
+        },
+        {
+          "enemies": [
+            "r5_frost_speaker",
+            "r5_frost_speaker"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5-8",
+      "region": 5,
+      "index": 8,
+      "name": "折光雪庭",
+      "kind": "normal",
+      "predecessor": "5-7",
+      "market_eligible": false,
+      "reward_focus": "mixed",
+      "decision": "晶卫、棱晶和冰隼检验破防、目标与保护；末场没有霜语者，棱晶只进行基础攻击，识别失活支援比盲目优先支援更有效。",
+      "counterplay": [
+        "先清冰隼减少较弱队员压力",
+        "保护较弱队员并集中削薄晶卫晶甲"
+      ],
+      "encounters": [
+        {
+          "enemies": [
+            "r5_crystal_guard",
+            "r5_prism"
+          ]
+        },
+        {
+          "enemies": [
+            "r5_frost_speaker",
+            "r5_ice_hawk"
+          ]
+        },
+        {
+          "enemies": [
+            "r5_crystal_guard",
+            "r5_prism",
+            "r5_ice_hawk"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5-9",
+      "region": 5,
+      "index": 9,
+      "name": "镜霜王座·镜霜兽",
+      "kind": "boss",
+      "predecessor": "5-8",
+      "market_eligible": true,
+      "reward_focus": "boss",
+      "decision": "镜霜兽在重击和追击间切换，兼顾两种生存压力。",
+      "counterplay": [
+        "用护盾应对重击后反攻",
+        "用恢复承受追击并集中压缩阶段"
+      ],
+      "encounters": [
+        {
+          "enemies": [
+            "r5_crystal_guard",
+            "r5_frost_speaker"
+          ]
+        },
+        {
+          "enemies": [
+            "r5_prism",
+            "r5_frost_speaker",
+            "r5_ice_hawk"
+          ]
+        },
+        {
+          "enemies": [
+            "r5_mirror_frost_beast"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6-1",
+      "region": 6,
+      "index": 1,
+      "name": "失序前庭",
+      "kind": "normal",
+      "predecessor": "5-9",
+      "market_eligible": false,
+      "reward_focus": "material",
+      "decision": "近远星侍属于同一模板，以姿态变体展示基础组合。",
+      "counterplay": [
+        "集中处理当前高威胁目标",
+        "通过保护与稳定输出应对近远程组合"
+      ],
+      "encounters": [
+        {
+          "enemies": [
+            "r6_star_acolyte"
+          ]
+        },
+        {
+          "enemies": [
+            "r6_star_acolyte",
+            "r6_star_acolyte"
+          ]
+        },
+        {
+          "enemies": [
+            "r6_star_acolyte",
+            "r6_star_acolyte"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6-2",
+      "region": 6,
+      "index": 2,
+      "name": "蚀甲长廊",
+      "kind": "normal",
+      "predecessor": "6-1",
+      "market_eligible": false,
+      "reward_focus": "equipment",
+      "decision": "蚀甲卫保护星屑使，重访保护与范围攻击来源的顺序。",
+      "counterplay": [
+        "集中破防解除保护",
+        "用可达目标或范围输出压制星屑使"
+      ],
+      "encounters": [
+        {
+          "enemies": [
+            "r6_eclipse_guard"
+          ]
+        },
+        {
+          "enemies": [
+            "r6_star_acolyte",
+            "r6_stardust_envoy"
+          ]
+        },
+        {
+          "enemies": [
+            "r6_eclipse_guard",
+            "r6_stardust_envoy"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6-3",
+      "region": 6,
+      "index": 3,
+      "name": "裂隙祭室",
+      "kind": "normal",
+      "predecessor": "6-2",
+      "market_eligible": false,
+      "reward_focus": "material",
+      "decision": "裂隙司祭有限召唤，压源头与群清均可。",
+      "counterplay": [
+        "优先击败司祭",
+        "接受有限增援后范围清理"
+      ],
+      "encounters": [
+        {
+          "enemies": [
+            "r6_star_acolyte"
+          ]
+        },
+        {
+          "enemies": [
+            "r6_rift_priest"
+          ]
+        },
+        {
+          "enemies": [
+            "r6_rift_priest",
+            "r6_star_acolyte"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6-4",
+      "region": 6,
+      "index": 4,
+      "name": "星屑高台",
+      "kind": "normal",
+      "predecessor": "6-3",
+      "market_eligible": false,
+      "reward_focus": "equipment",
+      "decision": "星屑使蓄力后同时攻击两名队员。",
+      "counterplay": [
+        "打断或集中击杀范围来源",
+        "预设双人防护或恢复后反攻"
+      ],
+      "encounters": [
+        {
+          "enemies": [
+            "r6_star_acolyte",
+            "r6_star_acolyte"
+          ]
+        },
+        {
+          "enemies": [
+            "r6_stardust_envoy"
+          ]
+        },
+        {
+          "enemies": [
+            "r6_stardust_envoy",
+            "r6_star_acolyte"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6-5",
+      "region": 6,
+      "index": 5,
+      "name": "裁决之门·圣所裁决者",
+      "kind": "elite",
+      "predecessor": "6-4",
+      "market_eligible": true,
+      "reward_focus": "elite",
+      "decision": "裁决者保护与蓄力姿态交替，检验泛用自动条件。",
+      "counterplay": [
+        "持续破防并抓住暴露期",
+        "保留防护应对蓄力后反攻"
+      ],
+      "encounters": [
+        {
+          "enemies": [
+            "r6_eclipse_guard",
+            "r6_star_acolyte"
+          ]
+        },
+        {
+          "enemies": [
+            "r6_stardust_envoy",
+            "r6_star_acolyte"
+          ]
+        },
+        {
+          "enemies": [
+            "r6_sanctum_judge"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6-6",
+      "region": 6,
+      "index": 6,
+      "name": "崩落甬道",
+      "kind": "normal",
+      "predecessor": "6-5",
+      "market_eligible": false,
+      "reward_focus": "material",
+      "decision": "司祭与低生命星侍提供精英后的强度回落与配置复核。",
+      "counterplay": [
+        "先处理低生命星侍减少压力",
+        "优先司祭阻止有限增援"
+      ],
+      "encounters": [
+        {
+          "enemies": [
+            "r6_star_acolyte"
+          ]
+        },
+        {
+          "enemies": [
+            "r6_star_acolyte",
+            "r6_star_acolyte"
+          ]
+        },
+        {
+          "enemies": [
+            "r6_rift_priest",
+            "r6_star_acolyte"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6-7",
+      "region": 6,
+      "index": 7,
+      "name": "双源祭坛",
+      "kind": "normal",
+      "predecessor": "6-6",
+      "market_eligible": true,
+      "reward_focus": "equipment",
+      "decision": "蚀甲卫保护司祭，检验集中突破与限制增援。",
+      "counterplay": [
+        "先破保护再集中司祭",
+        "使用范围输出处理有限增援"
+      ],
+      "encounters": [
+        {
+          "enemies": [
+            "r6_eclipse_guard",
+            "r6_star_acolyte"
+          ]
+        },
+        {
+          "enemies": [
+            "r6_rift_priest"
+          ]
+        },
+        {
+          "enemies": [
+            "r6_eclipse_guard",
+            "r6_rift_priest"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6-8",
+      "region": 6,
+      "index": 8,
+      "name": "终焉阶梯",
+      "kind": "normal",
+      "predecessor": "6-7",
+      "market_eligible": false,
+      "reward_focus": "mixed",
+      "decision": "司祭、星屑使与星侍并存，组合有限召唤和蓄力压力。",
+      "counterplay": [
+        "优先蓄力来源并保护双人",
+        "优先压制召唤并用范围输出减员"
+      ],
+      "encounters": [
+        {
+          "enemies": [
+            "r6_stardust_envoy",
+            "r6_star_acolyte"
+          ]
+        },
+        {
+          "enemies": [
+            "r6_eclipse_guard",
+            "r6_rift_priest"
+          ]
+        },
+        {
+          "enemies": [
+            "r6_rift_priest",
+            "r6_stardust_envoy",
+            "r6_star_acolyte"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6-9",
+      "region": 6,
+      "index": 9,
+      "name": "终星圣座·星蚀之心",
+      "kind": "boss",
+      "predecessor": "6-8",
+      "market_eligible": true,
+      "reward_focus": "boss",
+      "decision": "普通终点星蚀之心：外壳、有限裂隙源、终结蓄力三阶段。",
+      "counterplay": [
+        "破防与保护配合并利用蓄力后空档",
+        "范围清理有限来源并以持续恢复维持输出"
+      ],
+      "encounters": [
+        {
+          "enemies": [
+            "r6_eclipse_guard",
+            "r6_stardust_envoy"
+          ]
+        },
+        {
+          "enemies": [
+            "r6_rift_priest",
+            "r6_star_acolyte",
+            "r6_star_acolyte"
+          ]
+        },
+        {
+          "enemies": [
+            "r6_star_eclipse_heart"
+          ]
+        }
+      ]
+    }
+  ],
+  "source_sha256": "1e2d2acd01a733d85098da2ecd9d17775bd2a16c245613e11dd9ff77a32ca3e9"
+}
